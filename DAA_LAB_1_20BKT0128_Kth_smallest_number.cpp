@@ -29,7 +29,12 @@ int main() {
     insertion_sort(arr, n);
     cout << "\nEnter the kth element to find from the array: ";
     cin >> k;
-    cout << "Kth element is: " << arr[k - 1];
+    if (k <= 0 || k > n) {
+        cout << "Selected element out of bounds";
+    }
+    else {
+        cout << "Kth element is: " << arr[k - 1];
+    }
     cout << "\n\nName: Gaurav Navada\nReg.no.: 20BKT0128";
     return 0;
 }
